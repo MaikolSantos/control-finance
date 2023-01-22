@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Control Finance - Seu controle financeiro"
+    />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/colors.css" />
+    <link rel="stylesheet" href="/styles/texts.css" />
+    <link rel="stylesheet" href="/styles/buttons.css" />
+    <link rel="stylesheet" href="/styles/input.css" />
+    <link rel="stylesheet" href="/styles/itemList.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/divNewValue.css" />
+    <link rel="stylesheet" href="/styles/modal.css" />
+    <link rel="stylesheet" href="/styles/positioning.css" />
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="index.css" />
+    <title>Control Finance</title>
+  </head>
+  <body>
+    <header class="header__page">
+      <div class="container">
+        <h1 class="title-1-bold">
+          <span class="color-brand-1">Control</span>
+          <span>Finance</span>
+        </h1>
+        <button
+          class="button button-primary"
+          data-modal-control="modal-insert-value"
+        >
+          Registrar novo valor
+        </button>
+      </div>
+    </header>
+
+    <main class="container flex flex-column" id="app">
+      <header class="main__header flex flex-column justify-between">
+        <h2 class="title-2-medium">Resumo Financeiro</h2>
+        <ul class="main__filters flex wrap">
+          <li>
+            <button
+              class="button button-outline main__filter"
+              data-filter-id="0"
+            >
+              Todos
+            </button>
+          </li>
+          <li>
+            <button
+              class="button button-outline main__filter"
+              data-filter-id="1"
+            >
+              Entradas
+            </button>
+          </li>
+          <li>
+            <button
+              class="button button-outline main__filter"
+              data-filter-id="2"
+            >
+              Saídas
+            </button>
+          </li>
+        </ul>
+      </header>
+
+      <section class="main__body flex flex-column">
+        <div class="item-list total">
+          <p class="text-1-medium">Soma dos valores</p>
+          <span class="text-1-medium" id="total__values">R$ 0,00</span>
+        </div>
+
+        <ul class="list__values flex flex-column"></ul>
+      </section>
+    </main>
+
+    <!-- Templates -->
+    <script src="/scripts/templates/buttonTrash.js"></script>
+    <script src="/scripts/templates/divNewValue.js"></script>
+    <!-- Global Sripts -->
+    <script src="/scripts/modal.js"></script>
+    <!-- Page Scripts -->
+    <script src="valuesData.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

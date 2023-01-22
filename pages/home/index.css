@@ -1,0 +1,41 @@
+#app {
+  margin-top: 10.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.main__header {
+  gap: 2.375rem;
+}
+
+.main__filters {
+  column-gap: 0.875rem;
+  row-gap: 2rem;
+}
+
+.main__body {
+  gap: 1.875rem;
+}
+
+.main__body .total {
+  background-color: var(--color-grey-5);
+}
+
+.list__values {
+  gap: 1.25rem;
+}
+
+.item__buttons {
+  gap: 2rem;
+}
+
+.item__buttons .button-greylow {
+  min-width: 5.25rem;
+}
+
+@media (min-width: 500px) {
+  .main__header {
+    flex-direction: row;
+  }
+}

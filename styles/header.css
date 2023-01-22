@@ -1,0 +1,27 @@
+.header__page {
+  background-color: var(--color-grey-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 6.813rem;
+  z-index: 1;
+}
+
+.header__page .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+@media (min-width: 500px) {
+  .header__page .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
